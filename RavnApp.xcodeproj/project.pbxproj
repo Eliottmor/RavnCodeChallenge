@@ -14,6 +14,7 @@
 		843E5D2021B8CD6800E93C1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 843E5D1E21B8CD6800E93C1C /* LaunchScreen.storyboard */; };
 		843E5D2821B8D46200E93C1C /* GitHubService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843E5D2721B8D46200E93C1C /* GitHubService.swift */; };
 		84885F5721BB8CD900561FBA /* GitHubUsersViewController.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 84885F5621BB8CD900561FBA /* GitHubUsersViewController.graphql */; };
+		84885F5921BC32D600561FBA /* GitHubTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84885F5821BC32D600561FBA /* GitHubTableViewCell.swift */; };
 		8499B11021BB891E001C3F28 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8499B10F21BB891E001C3F28 /* API.swift */; };
 		92EBA5E1E40C7EAA81B3DFAD /* Pods_RavnApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC577B9ECCFAD68153E86395 /* Pods_RavnApp.framework */; };
 /* End PBXBuildFile section */
@@ -30,6 +31,7 @@
 		843E5D2121B8CD6800E93C1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		843E5D2721B8D46200E93C1C /* GitHubService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubService.swift; sourceTree = "<group>"; };
 		84885F5621BB8CD900561FBA /* GitHubUsersViewController.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; name = GitHubUsersViewController.graphql; path = ../../../../../Documents/GitHubUsersViewController.graphql; sourceTree = "<group>"; };
+		84885F5821BC32D600561FBA /* GitHubTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubTableViewCell.swift; sourceTree = "<group>"; };
 		8499B10F21BB891E001C3F28 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		FC577B9ECCFAD68153E86395 /* Pods_RavnApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RavnApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -78,6 +80,7 @@
 			children = (
 				843E5D1521B8CD6700E93C1C /* AppDelegate.swift */,
 				843E5D1721B8CD6700E93C1C /* ViewController.swift */,
+				84885F5821BC32D600561FBA /* GitHubTableViewCell.swift */,
 				8499B10F21BB891E001C3F28 /* API.swift */,
 				84885F5521BB8C5500561FBA /* GraphQL */,
 				843E5D2721B8D46200E93C1C /* GitHubService.swift */,
@@ -243,6 +246,7 @@
 				843E5D2821B8D46200E93C1C /* GitHubService.swift in Sources */,
 				8499B11021BB891E001C3F28 /* API.swift in Sources */,
 				843E5D1621B8CD6700E93C1C /* AppDelegate.swift in Sources */,
+				84885F5921BC32D600561FBA /* GitHubTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
