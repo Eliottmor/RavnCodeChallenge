@@ -12,9 +12,15 @@
 		843E5D1B21B8CD6700E93C1C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 843E5D1921B8CD6700E93C1C /* Main.storyboard */; };
 		843E5D1D21B8CD6800E93C1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 843E5D1C21B8CD6800E93C1C /* Assets.xcassets */; };
 		843E5D2021B8CD6800E93C1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 843E5D1E21B8CD6800E93C1C /* LaunchScreen.storyboard */; };
+		843E5D2821B8D46200E93C1C /* GitHubService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843E5D2721B8D46200E93C1C /* GitHubService.swift */; };
+		84885F5721BB8CD900561FBA /* GitHubUsersViewController.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 84885F5621BB8CD900561FBA /* GitHubUsersViewController.graphql */; };
+		8499B11021BB891E001C3F28 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8499B10F21BB891E001C3F28 /* API.swift */; };
+		92EBA5E1E40C7EAA81B3DFAD /* Pods_RavnApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC577B9ECCFAD68153E86395 /* Pods_RavnApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		18FCE93E69EB0F3EA81272BD /* Pods-RavnApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RavnApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-RavnApp/Pods-RavnApp.release.xcconfig"; sourceTree = "<group>"; };
+		21C9B963BB79790B68229D73 /* Pods-RavnApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RavnApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RavnApp/Pods-RavnApp.debug.xcconfig"; sourceTree = "<group>"; };
 		843E5D1221B8CD6600E93C1C /* RavnApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RavnApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		843E5D1521B8CD6700E93C1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		843E5D1721B8CD6700E93C1C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +28,10 @@
 		843E5D1C21B8CD6800E93C1C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		843E5D1F21B8CD6800E93C1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		843E5D2121B8CD6800E93C1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		843E5D2721B8D46200E93C1C /* GitHubService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubService.swift; sourceTree = "<group>"; };
+		84885F5621BB8CD900561FBA /* GitHubUsersViewController.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; name = GitHubUsersViewController.graphql; path = ../../../../../Documents/GitHubUsersViewController.graphql; sourceTree = "<group>"; };
+		8499B10F21BB891E001C3F28 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		FC577B9ECCFAD68153E86395 /* Pods_RavnApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RavnApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +39,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92EBA5E1E40C7EAA81B3DFAD /* Pods_RavnApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3EA7177942E323F7B41AEBFA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				21C9B963BB79790B68229D73 /* Pods-RavnApp.debug.xcconfig */,
+				18FCE93E69EB0F3EA81272BD /* Pods-RavnApp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		843E5D0921B8CD6600E93C1C = {
 			isa = PBXGroup;
 			children = (
 				843E5D1421B8CD6600E93C1C /* RavnApp */,
 				843E5D1321B8CD6600E93C1C /* Products */,
+				3EA7177942E323F7B41AEBFA /* Pods */,
+				E1DD395730637066298035C4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,12 +78,32 @@
 			children = (
 				843E5D1521B8CD6700E93C1C /* AppDelegate.swift */,
 				843E5D1721B8CD6700E93C1C /* ViewController.swift */,
+				8499B10F21BB891E001C3F28 /* API.swift */,
+				84885F5521BB8C5500561FBA /* GraphQL */,
+				843E5D2721B8D46200E93C1C /* GitHubService.swift */,
 				843E5D1921B8CD6700E93C1C /* Main.storyboard */,
 				843E5D1C21B8CD6800E93C1C /* Assets.xcassets */,
 				843E5D1E21B8CD6800E93C1C /* LaunchScreen.storyboard */,
 				843E5D2121B8CD6800E93C1C /* Info.plist */,
 			);
 			path = RavnApp;
+			sourceTree = "<group>";
+		};
+		84885F5521BB8C5500561FBA /* GraphQL */ = {
+			isa = PBXGroup;
+			children = (
+				84885F5621BB8CD900561FBA /* GitHubUsersViewController.graphql */,
+			);
+			name = GraphQL;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		E1DD395730637066298035C4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FC577B9ECCFAD68153E86395 /* Pods_RavnApp.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +113,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 843E5D2421B8CD6800E93C1C /* Build configuration list for PBXNativeTarget "RavnApp" */;
 			buildPhases = (
+				E2F7302C59CBF56065DA278A /* [CP] Check Pods Manifest.lock */,
+				843E5D2921B8DBA700E93C1C /* Generate Apollo GraphQL API */,
 				843E5D0E21B8CD6600E93C1C /* Sources */,
 				843E5D0F21B8CD6600E93C1C /* Frameworks */,
 				843E5D1021B8CD6600E93C1C /* Resources */,
+				2F163001B98BD0F9E6194A3E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -124,11 +169,70 @@
 			files = (
 				843E5D2021B8CD6800E93C1C /* LaunchScreen.storyboard in Resources */,
 				843E5D1D21B8CD6800E93C1C /* Assets.xcassets in Resources */,
+				84885F5721BB8CD900561FBA /* GitHubUsersViewController.graphql in Resources */,
 				843E5D1B21B8CD6700E93C1C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2F163001B98BD0F9E6194A3E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-RavnApp/Pods-RavnApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Apollo/Apollo.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Apollo.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RavnApp/Pods-RavnApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		843E5D2921B8DBA700E93C1C /* Generate Apollo GraphQL API */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Generate Apollo GraphQL API";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/API.swift",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "APOLLO_FRAMEWORK_PATH=\"$(eval find $FRAMEWORK_SEARCH_PATHS -name \"Apollo.framework\" -maxdepth 1)\"\n\nif [ -z \"$APOLLO_FRAMEWORK_PATH\" ]; then\necho \"error: Couldn't find Apollo.framework in FRAMEWORK_SEARCH_PATHS; make sure to add the framework to your project.\"\nexit 1\nfi\n\ncd \"${SRCROOT}/${TARGET_NAME}\"\n$APOLLO_FRAMEWORK_PATH/check-and-run-apollo-cli.sh codegen:generate --queries=\"$(find . -name '*.graphql')\" --schema=schema.json API.swift\n";
+		};
+		E2F7302C59CBF56065DA278A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RavnApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		843E5D0E21B8CD6600E93C1C /* Sources */ = {
@@ -136,6 +240,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				843E5D1821B8CD6700E93C1C /* ViewController.swift in Sources */,
+				843E5D2821B8D46200E93C1C /* GitHubService.swift in Sources */,
+				8499B11021BB891E001C3F28 /* API.swift in Sources */,
 				843E5D1621B8CD6700E93C1C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,6 +386,7 @@
 		};
 		843E5D2521B8CD6800E93C1C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 21C9B963BB79790B68229D73 /* Pods-RavnApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +405,7 @@
 		};
 		843E5D2621B8CD6800E93C1C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 18FCE93E69EB0F3EA81272BD /* Pods-RavnApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

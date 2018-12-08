@@ -1,0 +1,6 @@
+framework module Pods_RavnApp {
+  umbrella header "Pods-RavnApp-umbrella.h"
+
+  export *
+  module * { export * }
+}
