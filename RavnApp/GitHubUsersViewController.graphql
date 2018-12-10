@@ -1,0 +1,20 @@
+
+query GitHubUsers($login_name:String!) {
+    user(login: $login_name) {
+        name
+        location
+        login
+        avatarUrl
+    }
+}
+
+query getLoginName($name: String!) {
+    search(type: USER, query: $name, first: 15) {
+        edges {
+            textMatches {
+                fragment
+                property
+            }
+        }
+    }
+}
