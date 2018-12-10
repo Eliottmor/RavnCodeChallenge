@@ -13,6 +13,10 @@ protocol GitHubServiceDelegate: class {
     func updateGitHubViewModel(with logins:[GitHubUserViewModel])
 }
 
+protocol RepositoryDelegate: class {
+    func updateRepositoryTableView(with repositories:[RepositoryDetails])
+}
+
 struct GitHubUserViewModel {
     let name:String?
     let location:String?
@@ -25,6 +29,7 @@ class GitHubService {
     //token:
     
     weak var gitHubDelegate: GitHubServiceDelegate?
+    weak var repositoryDelegate: RepositoryDelegate?
     
     let apollo: ApolloClient = {
         let configuration = URLSessionConfiguration.default
@@ -35,7 +40,7 @@ class GitHubService {
         return ApolloClient(networkTransport: HTTPNetworkTransport(url: url, configuration: configuration))
     }()
     
-    func getLoginUserNames(name:String) -> [String] {
+    func getLoginUserNames(name:String) {
         var logins: [String] = []
         let getLoginUsernames = GetLoginNameQuery(name: name)
         apollo.fetch(query: getLoginUsernames) { result , error in
@@ -45,7 +50,6 @@ class GitHubService {
             }
             self.getUserInformation(names: logins)
         }
-        return logins
     }
     
     func getUserInformation(names:[String]) {
@@ -70,6 +74,16 @@ class GitHubService {
             myGroup.notify(queue: .main) {
                 self.gitHubDelegate?.updateGitHubViewModel(with: users)
             }
+        }
+    }
+    
+    func getRepositoryInformation(with loginName: String) {
+        var repositoriesData = [RepositoryDetails]()
+        let getRepositories = GetRepositoriesQuery(login_name: loginName)
+        apollo.fetch(query: getRepositories) { result, error in
+            guard let repositories = result?.data?.user?.repositories.nodes else { return }
+            repositoriesData = repositories.compactMap {$0?.fragments.repositoryDetails}
+            self.repositoryDelegate?.updateRepositoryTableView(with: repositoriesData)
         }
     }
 

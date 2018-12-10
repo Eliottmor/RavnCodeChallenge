@@ -18,3 +18,21 @@ query getLoginName($name: String!) {
         }
     }
 }
+
+fragment RepositoryDetails on Repository {
+    name
+    description
+    pullRequests {
+        totalCount
+    }
+}
+
+query getRepositories($login_name:String!){
+    user(login: $login_name) {
+        repositories(first: 10) {
+            nodes {
+               ...RepositoryDetails
+            }
+        }
+    }
+}
