@@ -1,6 +1,6 @@
 # RavnCodeChallenge
 
-In the GitHubService.swift file there is a location to add a token. I left a comment where it should go. It should replace "<token>".
+In the GitHubService.swift file there is a location to add a token. I left a comment where it should go. It should replace "\<token\>".
 Once the token is added, it will be good to run. 
 
 I used MVC architecture. I have the github service that loads all the information based on the search. Once the information loads
